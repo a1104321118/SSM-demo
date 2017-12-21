@@ -21,6 +21,12 @@ public class UserController {
 
 	@Autowired
 	private UserService userService;
+
+	@RequestMapping("/test")
+	@ResponseBody
+	public User test(){
+		return userService.getUserByUsername("a");
+	}
 	
 	
 	@RequestMapping(value="login")
